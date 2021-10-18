@@ -23,4 +23,15 @@ class FrontController extends Controller
     public function JobView(){
         return view('frontpage.find_jobs');
     }
+
+    public function BlogView(){
+        return view('frontpage.blog');
+    }
+
+    
+    public function ContactView(){
+        return view('frontpage.contact');
+    }
+
+
 }
