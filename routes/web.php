@@ -1,15 +1,16 @@
 <?php
 
 use App\Http\Controllers\Home\FrontController;
+use App\Http\Controllers\User\UserCategoryController;
 use Illuminate\Support\Facades\Route;
- 
+use Illuminate\Support\Facades\Session;
 
-Route::get('/', function () {
-    return view('backend.dashboard');
-});
+// Route::get('/', function () {
+//     return view('frontpage.home');
+// });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+    return view('backend.dashboard');
 })->name('dashboard');
 
 
@@ -19,17 +20,27 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 /// User Profile and Change Password 
 Route::prefix('home')->group(function(){
 
-    // Route::get('/', [FrontController::class, 'HomeView'])->name('home.view');
+    Route::get('/', [FrontController::class, 'HomeView'])->name('home.view');
     Route::get('/about', [FrontController::class, 'AboutView'])->name('about.view');
     Route::get('/jobs', [FrontController::class, 'JobView'])->name('job.view');
     Route::get('/blog', [FrontController::class, 'BlogView'])->name('blog.view');
     Route::get('/contact', [FrontController::class, 'ContactView'])->name('contact.view');
-
-
-
-
-    
- 
     
     }); 
+
+
+// Setup
+Route::prefix('setup')->group(function(){
+    Route::get('/user/category/view', [ UserCategoryController::class,'UserCatView'])->name('user.category.view');
+    Route::get('/user/category/add', [ UserCategoryController::class,'UserCatAdd'])->name('user.category.add');
+    Route::post('/user/category/store', [ UserCategoryController::class,'UserCatStore'])->name('user.category.store');
+    Route::get('/user/category/edit/{id}', [ UserCategoryController::class,'UserCatEdit'])->name('user.category.edit');
+    Route::post('/user/category/update/{id}', [ UserCategoryController::class,'UserCatUpdate'])->name('user.category.update');
+    Route::get('/user/category/delete/{id}', [ UserCategoryController::class,'UserCatDelete'])->name('user.category.delete');
+
+
+
+
+
     
+});
