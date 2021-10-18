@@ -46,7 +46,7 @@
                         <div class="col-lg-3 col-md-2">
                             <!-- Logo -->
                             <div class="logo">
-                                <a href="index.html"><img src="files/img/logo/logo.png" alt=""></a>
+                                <a href="{{route('home.view')}}"><img src="files/img/logo/logo.png" alt=""></a>
                             </div>  
                         </div>
                         <div class="col-lg-9 col-md-9">
@@ -55,19 +55,23 @@
                                 <div class="main-menu">
                                     <nav class="d-none d-lg-block">
                                         <ul id="navigation">
-                                            <li><a href="{{route('home.view')}}">Home</a></li>
                                             <li><a href="{{route('job.view')}}">Find a Jobs </a></li>
                                             <li><a href="{{route('about.view')}}">About</a></li>
                                             <li><a href="{{route('blog.view')}}">Blog</a></li>
-                                            <li><a href="#">Page</a>
+                                     
+
+                                            <li><a href="#">page</a>
                                                 <ul class="submenu">
-                                                   
-                                                    <li><a href="single-blog.html">Blog Details</a></li>
-                                                    <li><a href="elements.html">Elements</a></li>
-                                                    <li><a href="job_details.html">job Details</a></li>
+                                                    <li><a href="#">French</a></li>
+                                                    <li><a href="#">Spainish</a></li>
+                                                    <li><a href="#">Italian</a></li>
+                                                    <li><a href="#">French</a></li>
+                                                    <li><a href="#">English</a></li>
+                                                    <li><a href="#">German</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="{{route('contact.view')}}">Contact</a></li>
+
                                         </ul>
                                     </nav>
                                 </div>          

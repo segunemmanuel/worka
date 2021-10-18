@@ -16,3 +16,13 @@ yarn-error.log
 *.png
 *.ttf
 *.jpg
+*.woff2
+*.svg
+*.scss
+*.map
+*.html
+*.js
+*.json
+*.pdf
+*.ico
+*.md
