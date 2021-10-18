@@ -20,6 +20,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::prefix('home')->group(function(){
 
     Route::get('/', [FrontController::class, 'HomeView'])->name('home.view');
+    Route::get('/about', [FrontController::class, 'AboutView'])->name('about.view');
+    Route::get('/jobs', [FrontController::class, 'JobView'])->name('job.view');
+
+
     
  
     

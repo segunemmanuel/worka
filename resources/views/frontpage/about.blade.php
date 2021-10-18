@@ -7,7 +7,8 @@
 
     <!-- Hero Area Start-->
     <div class="slider-area ">
-    <div class="single-slider section-overly slider-height2 d-flex align-items-center" data-background="files/img/hero/about.jpg" style="background-image: url(&quot;files/img/hero/about.jpg&quot;);">
+    <div class="single-slider section-overly slider-height2 d-flex align-items-center" data-background="{{asset('files/img/hero/about.jpg')}}" 
+    style="background-image: url(&quot;{{asset('files/img/hero/about.jpg')}}&quot;);">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
@@ -40,7 +41,7 @@
                 </div>
                 <div class="col-xl-6 col-lg-6">
                     <div class="support-location-img">
-                        <img src="files/img/service/support-img.jpg" alt="">
+                        <img src="{{asset('files/img/service/support-img.jpg')}}" alt="">
                         <div class="text-center support-img-cap">
                             <p>Since</p>
                             <span>1994</span>
@@ -52,7 +53,8 @@
     </div>
     <!-- Support Company End-->
     <!-- How  Apply Process Start-->
-    <div class="apply-process-area apply-bg pt-150 pb-150" data-background="files/img/gallery/how-applybg.png" style="background-image: url(&quot;files/img/gallery/how-applybg.png&quot;);">
+    <div class="apply-process-area apply-bg pt-150 pb-150" data-background="{{asset('files/img/gallery/how-applybg.png')}}" style="background-image: 
+    url(&quot;{{asset('files/img/gallery/how-applybg.png')}}&quot;);">
         <div class="container">
             <!-- Section Tittle -->
             <div class="row">
@@ -116,7 +118,7 @@
                                 <!-- founder -->
                                 <div class="testimonial-founder ">
                                     <div class="founder-img mb-30">
-                                        <img src="files/img/testmonial/testimonial-founder.png" alt="">
+                                        <img src="asset('files/img/testmonial/testimonial-founder.png')" alt="">
                                         <span>Margaret Lawson</span>
                                         <p>Creative Director</p>
                                     </div>
@@ -131,7 +133,7 @@
                                 <!-- founder -->
                                 <div class="testimonial-founder ">
                                     <div class="founder-img mb-30">
-                                        <img src="files/img/testmonial/testimonial-founder.png" alt="">
+                                        <img src="{{asset('files/img/testmonial/testimonial-founder.png')}}" alt="">
                                         <span>Margaret Lawson</span>
                                         <p>Creative Director</p>
                                     </div>
@@ -146,7 +148,7 @@
                                 <!-- founder -->
                                 <div class="testimonial-founder ">
                                     <div class="founder-img mb-30">
-                                        <img src="files/img/testmonial/testimonial-founder.png" alt="">
+                                        <img src="{{asset('files/img/testmonial/testimonial-founder.png')}}" alt="">
                                         <span>Margaret Lawson</span>
                                         <p>Creative Director</p>
                                     </div>
@@ -161,7 +163,7 @@
                                 <!-- founder -->
                                 <div class="testimonial-founder ">
                                     <div class="founder-img mb-30">
-                                        <img src="files/img/testmonial/testimonial-founder.png" alt="">
+                                        <img src="{{asset('files/img/testmonial/testimonial-founder.png')}}" alt="">
                                         <span>Margaret Lawson</span>
                                         <p>Creative Director</p>
                                     </div>
@@ -176,7 +178,7 @@
                                 <!-- founder -->
                                 <div class="testimonial-founder ">
                                     <div class="founder-img mb-30">
-                                        <img src="files/img/testmonial/testimonial-founder.png" alt="">
+                                        <img src="{{asset('files/img/testmonial/testimonial-founder.png')}}" alt="">
                                         <span>Margaret Lawson</span>
                                         <p>Creative Director</p>
                                     </div>
@@ -191,7 +193,7 @@
                                 <!-- founder -->
                                 <div class="testimonial-founder ">
                                     <div class="founder-img mb-30">
-                                        <img src="files/img/testmonial/testimonial-founder.png" alt="">
+                                        <img src="{{asset('files/img/testmonial/testimonial-founder.png')}}" alt="">
                                         <span>Margaret Lawson</span>
                                         <p>Creative Director</p>
                                     </div>
@@ -206,7 +208,7 @@
                                 <!-- founder -->
                                 <div class="testimonial-founder ">
                                     <div class="founder-img mb-30">
-                                        <img src="files/img/testmonial/testimonial-founder.png" alt="">
+                                        <img src="{{asset('files/img/testmonial/testimonial-founder.png')}}" alt="">
                                         <span>Margaret Lawson</span>
                                         <p>Creative Director</p>
                                     </div>
@@ -227,7 +229,8 @@
     </div>
     <!-- Testimonial End -->
     <!-- Online CV Area Start -->
-    <div class="online-cv cv-bg section-overly pt-90 pb-120" data-background="files/img/gallery/cv_bg.jpg" style="background-image: url(&quot;files/img/gallery/cv_bg.jpg&quot;);">
+    <div class="online-cv cv-bg section-overly pt-90 pb-120" data-background="{{asset('files/img/gallery/cv_bg.jpg')}}" style="background-image: url(&quot;
+    {{asset('files/img/gallery/cv_bg.jpg')}}&quot;);">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-10">
@@ -259,7 +262,7 @@
                     <div class="home-blog-single mb-30">
                         <div class="blog-img-cap">
                             <div class="blog-img">
-                                <img src="files/img/blog/home-blog1.jpg" alt="">
+                                <img src="{{asset('files/img/blog/home-blog1.jpg')}}" alt="">
                                 <!-- Blog date -->
                                 <div class="text-center blog-date">
                                     <span>24</span>
@@ -278,7 +281,7 @@
                     <div class="home-blog-single mb-30">
                         <div class="blog-img-cap">
                             <div class="blog-img">
-                                <img src="files/img/blog/home-blog2.jpg" alt="">
+                                <img src="{{asset('files/img/blog/home-blog2.jpg')}}" alt="">
                                 <!-- Blog date -->
                                 <div class="text-center blog-date">
                                     <span>24</span>
