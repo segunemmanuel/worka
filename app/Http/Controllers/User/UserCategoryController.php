@@ -11,10 +11,10 @@ class UserCategoryController extends Controller
 
     public function UserCatView(){
         $data['allData']=UserCategory::all();
-        return view ('backend.setup.user.user_category_view',$data);
+        return view ('backend.setup.user_category.user_category_view',$data);
     }
     public function UserCatAdd(){
-        return view ('backend.setup.user.user_category_add');
+        return view ('backend.setup.user_category.user_category_add');
     }
 
 
@@ -40,7 +40,7 @@ return redirect()->route('user.category.view')->with($notification);
 public function UserCatEdit($id){
 
     $editData=UserCategory::find($id);
-    return view ('backend.setup.user.user_category_edit',compact('editData'));
+    return view ('backend.setup.user_category.user_category_edit',compact('editData'));
 
 }
 
