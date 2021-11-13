@@ -34,7 +34,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{route('user.category.view')}}"><i class="ti-more"></i>User categories</a></li>
-            <li><a href="chat.html"><i class="ti-more"></i>Chat</a></li>
+            <li><a href="{{route('user.view')}}"><i class="ti-more"></i>Users</a></li>
             <li><a href="chat.html"><i class="ti-more"></i>Chat</a></li>
             <li><a href="chat.html"><i class="ti-more"></i>Chat</a></li>
 

@@ -2,12 +2,13 @@
 
 use App\Http\Controllers\Home\FrontController;
 use App\Http\Controllers\User\UserCategoryController;
+use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
 
-// Route::get('/', function () {
-//     return view('frontpage.home');
-// });
+Route::get('/', function () {
+    return view('frontpage.home');
+});
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('backend.dashboard');
@@ -37,10 +38,7 @@ Route::prefix('setup')->group(function(){
     Route::get('/user/category/edit/{id}', [ UserCategoryController::class,'UserCatEdit'])->name('user.category.edit');
     Route::post('/user/category/update/{id}', [ UserCategoryController::class,'UserCatUpdate'])->name('user.category.update');
     Route::get('/user/category/delete/{id}', [ UserCategoryController::class,'UserCatDelete'])->name('user.category.delete');
+    Route::get('/users/view', [ UserController::class,'UserView'])->name('user.view');
 
 
-
-
-
-    
 });
