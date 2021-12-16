@@ -3,8 +3,10 @@
 use App\Http\Controllers\Home\FrontController;
 use App\Http\Controllers\User\UserCategoryController;
 use App\Http\Controllers\User\UserController;
+use App\Http\Controllers\User\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
+
 
 Route::get('/', function () {
     return view('frontpage.home');
@@ -27,7 +29,7 @@ Route::prefix('home')->group(function(){
     Route::get('/blog', [FrontController::class, 'BlogView'])->name('blog.view');
     Route::get('/contact', [FrontController::class, 'ContactView'])->name('contact.view');
     
-    }); 
+    });    
 
 
 // Setup
@@ -39,6 +41,18 @@ Route::prefix('setup')->group(function(){
     Route::post('/user/category/update/{id}', [ UserCategoryController::class,'UserCatUpdate'])->name('user.category.update');
     Route::get('/user/category/delete/{id}', [ UserCategoryController::class,'UserCatDelete'])->name('user.category.delete');
     Route::get('/users/view', [ UserController::class,'UserView'])->name('user.view');
+    Route::get('/user/edit/{id}', [ UserController::class,'UserEdit'])->name('user.edit');
+
+
+
+});
+
+
+
+Route::prefix('profile')->group(function(){
+    Route::get('/view_profile', [ ProfileController::class,'ProfileView'])->name('view.profile');
+ 
+ 
 
 
 });
