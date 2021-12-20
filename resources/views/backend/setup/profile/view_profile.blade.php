@@ -3,22 +3,23 @@
 
 
 <div class="box box-inverse bg-img" style="background-image: url(../images/gallery/full/1.jpg);" data-overlay="2">
-					  <div class="flexbox px-20 pt-20">
-						<label class="toggler toggler-danger text-white">
+					  <div class="px-20 pt-20 flexbox">
+						<label class="text-white toggler toggler-danger">
 						  <input type="checkbox">
 						  <i class="fa fa-heart"></i>
 						</label>
 				 					  </div>
 
-					  <div class="box-body text-center pb-50">
+					  <div class="text-center box-body pb-50">
 						<a href="#">
-						  <img class="avatar avatar-xxl avatar-bordered" src="../images/avatar/5.jpg" alt="">
+                          <img class="rounded-circle"
+                          src="{{ (!empty($user->image))? url('upload/user_images/'.$user->image):url('upload/no_image.jpg') }} " alt="User Avatar">
 						</a>
-						<h4 class="mt-2 mb-0"><a class="hover-primary text-white" href="#">Roben Parkar</a></h4>
-						<span><i class="fa fa-map-marker w-20"></i> Miami</span>
+						<h4 class="mt-2 mb-0"><a class="text-white hover-primary" href="#">Roben Parkar</a></h4>
+						<span><i class="w-20 fa fa-map-marker"></i> Miami</span>
 					  </div>
 
-					  <ul class="box-body flexbox flex-justified text-center" data-overlay="4">
+					  <ul class="text-center box-body flexbox flex-justified" data-overlay="4">
 						<li>
 						  <span class="opacity-60">Email</span><br>
 						  <span class="font-size-20">{{ $user->email}}</span>
@@ -40,9 +41,9 @@
 					  <div class="row">
 						<div class="col-12">
 							<div>
-								<p>Email :<span class="text-gray pl-10">David@yahoo.com</span> </p>
-								<p>Phone :<span class="text-gray pl-10">+11 123 456 7890</span></p>
-								<p>Address :<span class="text-gray pl-10">123, Lorem Ipsum, Florida, USA</span></p>
+								<p>Email :<span class="pl-10 text-gray">David@yahoo.com</span> </p>
+								<p>Phone :<span class="pl-10 text-gray">+11 123 456 7890</span></p>
+								<p>Address :<span class="pl-10 text-gray">123, Lorem Ipsum, Florida, USA</span></p>
 							</div>
 						</div>
 						<div class="col-12">
