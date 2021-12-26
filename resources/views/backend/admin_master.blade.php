@@ -9,19 +9,21 @@
     <link rel="icon" href="../images/favicon.ico">
 
     <title>Sunny Admin - Dashboard</title>
-    
+
 	<!-- Vendors Style-->
 	<link rel="stylesheet" href="{{asset('main/css/vendors_css.css')}}">
-	  
-	<!-- Style-->  
+
+	<!-- Style-->
 	<link rel="stylesheet" href="{{asset('main/css/style.css')}}">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
+<script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
+
 	<link rel="stylesheet" href="{{asset('main/css/skin_color.css')}}">
-     
+
   </head>
-  
+
   @include('backend.body.header')
-  
+
   <!-- Left side column. contains the logo and sidebar -->
   @include('backend.body.sidebar')
 
@@ -39,7 +41,6 @@
 	  </div>
   </div>
 
-  
+
   <!-- /.content-wrapper -->
   @include('backend.body.footer')
-  

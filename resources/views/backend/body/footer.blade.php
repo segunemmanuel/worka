@@ -15,20 +15,22 @@
   <!-- Control Sidebar -->
 
   <!-- /.control-sidebar -->
-  
+
   <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
-  
+
 </div>
 <!-- ./wrapper -->
-  	
-	 
+
+
 	<!-- Vendor JS -->
 	<script src="{{asset('main/js/vendors.min.js')}}"></script>
-  <script src="{{asset('../assets/icons/feather-icons/feather.min.js')}}"></script>	
+  <script src="{{asset('../assets/icons/feather-icons/feather.min.js')}}"></script>
 <script src="{{asset('../assets/vendor_components/easypiechart/dist/jquery.easypiechart.js')}}"></script>
 <script src="{{asset('../assets/vendor_components/apexcharts-bundle/irregular-data-series.js')}}"></script>
 <script src="{{asset('../assets/vendor_components/apexcharts-bundle/dist/apexcharts.js')}}"></script>
+<script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
+
 
 <!-- Sunny Admin App -->
 <script src="{{asset('main/js/template.js')}}"></script>
@@ -42,7 +44,7 @@ $(function(){
 $(document).on('click','#delete', function(e){
 e.preventDefault();
 var link=$(this).attr("href");
- 
+
 Swal.fire({
   title: 'Are you sure?',
   text: "You won't be able to revert this!",
@@ -70,7 +72,7 @@ Swal.fire({
 </script>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-	
+
 	<script>
 	 @if(Session::has('message'))
 	 var type = "{{ Session::get('alert-type','info') }}"
@@ -78,24 +80,23 @@ Swal.fire({
 		case 'info':
 		toastr.info(" {{ Session::get('message') }} ");
 		break;
-	
+
 		case 'success':
 		toastr.success(" {{ Session::get('message') }} ");
 		break;
-	
+
 		case 'warning':
 		toastr.warning(" {{ Session::get('message') }} ");
 		break;
-	
+
 		case 'error':
 		toastr.error(" {{ Session::get('message') }} ");
-		break; 
+		break;
 	 }
-	 @endif 
+	 @endif
 	</script>
-	
-	
-		
+
+
+
 	</body>
 	</html>
-	
