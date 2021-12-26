@@ -7,7 +7,7 @@
                 <div class="box">
                 <div class="box-header with-border">
                 <h3 class="box-title">User categories list</h3>
-                <a href="" style="float: right;" class="mb-5 btn btn-rounded btn-success"> Add user category</a>			  
+                <a href="" style="float: right;" class="mb-5 btn btn-rounded btn-success"> Add user category</a>
                 </div>
                    <!-- /.box-header -->
                    <div class="box-body">
@@ -15,25 +15,25 @@
                          <table id="example1" class="table table-bordered table-striped">
                            <thead>
                            <tr>
-                   <th width="5%">SL</th>  
-                   <th>Name</th> 
+                   <th width="5%">SL</th>
+                   <th>Names</th>
                    <th>Date registered</th>
-                   <th>Role</th> 
-                   <th></th> 
+                   <th>Role</th>
+                   <th></th>
                    <th width="25%">Action</th>
                    </tr>
                    </thead>
                    <tbody>
                        @foreach ($user_model as $key=> $user )
-                           
+
                            <tr>
+                               <td>1</td>
                    <td>{{$user->email}}</td>
-                                           
                    <td>a</td>
                    <td>a</td>
                    <td>a</td>
 
-                   <td>a</td>				 
+                   <td>a</td>
                    <td>
                     <a href="{{ route('user.edit',$user->id) }}" class="btn btn-info">Edit</a>
                    <a href="" class="btn btn-danger" id="delete">Delete</a>
@@ -49,10 +49,10 @@
                    <!-- /.box-body -->
                  </div>
                  <!-- /.box -->
-   
-                      
+
+
                </div>
-        </div>  
+        </div>
 </section>
 
 

@@ -27,7 +27,7 @@
         		<li>
           <a href="{{route('view.profile')}}">
             <i data-feather="pie-chart"></i>
-			<span>Profile</span> 
+			<span>Profile</span>
           </a>
         </li>
 
@@ -36,7 +36,7 @@
         <li class="treeview">
           <a href="#">
             <i data-feather="message-circle"></i>
-            <span>Setup management</span>
+            <span>Users management</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>

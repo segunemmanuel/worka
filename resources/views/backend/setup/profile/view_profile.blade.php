@@ -12,8 +12,8 @@
 
 					  <div class="text-center box-body pb-50">
 						<a href="#">
-                          <img class="rounded-circle"
-                          src="{{ (!empty($user->image))? url('upload/user_images/'.$user->image):url('upload/no_image.jpg') }} " alt="User Avatar">
+                          <img class="rounded-circle" src="{{ asset($user->image) }}"
+                              alt="User Avatar">
 						</a>
 						<h4 class="mt-2 mb-0"><a class="text-white hover-primary" href="#">Roben Parkar</a></h4>
 						<span><i class="w-20 fa fa-map-marker"></i> Miami</span>

@@ -4,6 +4,7 @@ use App\Http\Controllers\Home\FrontController;
 use App\Http\Controllers\User\UserCategoryController;
 use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\User\ProfileController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
 
@@ -20,7 +21,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 
 
-/// User Profile and Change Password 
+Route::get('/logout', [FrontController::class, 'Logout'])->name('logout');
+
+/// User Profile and Change Password
 Route::prefix('home')->group(function(){
 
     Route::get('/', [FrontController::class, 'HomeView'])->name('home.view');
@@ -28,8 +31,8 @@ Route::prefix('home')->group(function(){
     Route::get('/jobs', [FrontController::class, 'JobView'])->name('job.view');
     Route::get('/blog', [FrontController::class, 'BlogView'])->name('blog.view');
     Route::get('/contact', [FrontController::class, 'ContactView'])->name('contact.view');
-    
-    });    
+
+    });
 
 
 // Setup
@@ -51,8 +54,11 @@ Route::prefix('setup')->group(function(){
 
 Route::prefix('profile')->group(function(){
     Route::get('/view_profile', [ ProfileController::class,'ProfileView'])->name('view.profile');
- 
- 
+    Route::get('/edit_profile', [ ProfileController::class,'ProfileEdit'])->name('edit.profile');
+    Route::post('/update_profile/{id}', [ ProfileController::class,'ProfileUpdate'])->name('profile.update');
+
+
+
 
 
 });

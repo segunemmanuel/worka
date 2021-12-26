@@ -27,6 +27,15 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'user_category_id',
+        'address',
+        'dob',
+        'gender',
+        'cv',
+        'id_no',
+        'religion',
+        'mobile',
+
     ];
 
     /**
@@ -58,4 +67,9 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function userlink(){
+        return $this->belongsTo(UserCategory::class, 'user_category_id','id');
+    }
+
 }

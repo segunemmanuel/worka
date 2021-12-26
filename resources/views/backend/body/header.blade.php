@@ -2,7 +2,7 @@
 
 
 <body class="fixed hold-transition dark-skin sidebar-mini theme-primary">
-	
+
 <div class="wrapper">
 
   <header class="main-header">
@@ -20,7 +20,7 @@
 				<a href="#" data-provide="fullscreen" class="rounded waves-effect waves-light nav-link svg-bt-icon" title="Full Screen">
 					<i class="nav-link-icon mdi mdi-crop-free"></i>
 			    </a>
-			</li>			
+			</li>
 			<li class="btn-group nav-item d-none d-xl-inline-block">
 				<a href="#" class="rounded waves-effect waves-light nav-link svg-bt-icon" title="">
 					<i class="ti-check-box"></i>
@@ -33,15 +33,15 @@
 			</li>
 		  </ul>
 	  </div>
-		
+
       <div class="navbar-custom-menu r-side">
         <ul class="nav navbar-nav">
 		  <!-- full Screen -->
-	      <li class="search-bar">		  
+	      <li class="search-bar">
 			  <div class="lookup lookup-circle lookup-right">
 			     <input type="text" name="s">
 			  </div>
-		  </li>			
+		  </li>
 		  <!-- Notifications -->
 		  <li class="dropdown notifications-menu">
 			<a href="#" class="rounded waves-effect waves-light dropdown-toggle" data-toggle="dropdown" title="Notifications">
@@ -92,7 +92,7 @@
 				  </li>
 				  <li>
 					<a href="#">
-					  <i class="fa fa-user text-primary"></i> Nunc fringilla lorem 
+					  <i class="fa fa-user text-primary"></i> Nunc fringilla lorem
 					</a>
 				  </li>
 				  <li>
@@ -106,29 +106,29 @@
 				  <a href="#">View all</a>
 			  </li>
 			</ul>
-		  </li>	
-		  
+		  </li>
+
 	      <!-- User Account-->
-          <li class="dropdown user user-menu">	
+          <li class="dropdown user user-menu">
 			<a href="#" class="p-0 rounded waves-effect waves-light dropdown-toggle" data-toggle="dropdown" title="User">
 				<img src="../images/avatar/1.jpg" alt="">
 			</a>
 			<ul class="dropdown-menu animated flipInX">
 			  <li class="user-body">
-				 <a class="dropdown-item" href="#"><i class="mr-2 ti-user text-muted"></i> Profile</a>
-				 <a class="dropdown-item" href="#"><i class="mr-2 ti-wallet text-muted"></i> My Wallet</a>
-				 <a class="dropdown-item" href="#"><i class="mr-2 ti-settings text-muted"></i> Settings</a>
+				 <a class="dropdown-item" href="{{route('view.profile')}}"><i class="mr-2 ti-user text-muted"></i> Profile</a>
+				 <a class="dropdown-item" href="{{route('logout')}}"><i class="mr-2 ti-wallet text-muted"></i> My Wallet</a>
+				 <a class="dropdown-item" href="{{route('edit.profile')}}"><i class="mr-2 ti-settings text-muted"></i> Settings</a>
 				 <div class="dropdown-divider"></div>
 				 <a class="dropdown-item" href="#"><i class="mr-2 ti-lock text-muted"></i> Logout</a>
 			  </li>
 			</ul>
-          </li>	
+          </li>
 		  <li>
               <a href="#" data-toggle="control-sidebar" title="Setting" class="waves-effect waves-light">
 			  	<i class="ti-settings"></i>
 			  </a>
           </li>
-			
+
         </ul>
       </div>
     </nav>

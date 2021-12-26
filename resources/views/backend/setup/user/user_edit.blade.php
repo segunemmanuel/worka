@@ -10,15 +10,15 @@
 <div class="box-body">
 <div class="row">
 <div class="col">
-<form method="POST" action="{{route('user.update',$editData->id)}}">
+<form method="POST" action="{{route('user.edit', $editData->id)}}">
     @csrf
 <input type="hidden" name="name">
 <div class="row">
-<div class="col-12">	
+<div class="col-12">
 <div class="form-group">
 <h5>User name <span class="text-danger">*</span></h5>
 <div class="controls">
-<input type="text" name="name" value="{{$editData->name}}" class="form-control"> 
+<input type="text" name="name" value="{{$editData->name}}" class="form-control">
 @error('name')
 <span class="text-danger">{{ $message }}</span>
 @enderror

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class FrontController extends Controller
 {
@@ -28,10 +29,14 @@ class FrontController extends Controller
         return view('frontpage.blog');
     }
 
-    
+
     public function ContactView(){
         return view('frontpage.contact');
     }
 
+    public function Logout(){
+    	Auth::logout();
+    	return Redirect()->route('login');
 
+    }
 }
