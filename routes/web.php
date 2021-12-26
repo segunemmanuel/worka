@@ -48,6 +48,8 @@ Route::prefix('setup')->group(function(){
 
     // Companies
     Route::get('/companies/view', [ CompanyController::class,'CompanyView'])->name('companies.view');
+    Route::get('/companies/add', [ CompanyController::class,'CompanyAdd'])->name('company.add');
+
 
 
 

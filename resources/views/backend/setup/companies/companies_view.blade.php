@@ -8,7 +8,7 @@
                 <div class="box">
                 <div class="box-header with-border">
                 <h3 class="box-title">Companies list</h3>
-                <a href="" style="float: right;" class="mb-5 btn btn-rounded btn-success"> Add companies</a>
+                <a href="{{route('company.add')}}" style="float: right;" class="mb-5 btn btn-rounded btn-success"> Add company</a>
                 </div>
                    <!-- /.box-header -->
                    <div class="box-body">
@@ -27,10 +27,9 @@
 
                     <tr>
                     <td>1</td>
-                   <td></td>
-                   <td>a</td>
-                   <td>a</td>
-                   <td>a</td>
+                   <td>Google</td>
+                   <td>gmail@gmail.com/td>
+                   <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.luptatibus ipsam quasi.</td>
                    <td>
                     <a href="" class="btn btn-info">Edit</a>
                    <a href="" class="btn btn-danger" id="delete">Delete</a>

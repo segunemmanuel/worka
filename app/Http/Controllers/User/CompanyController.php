@@ -16,4 +16,8 @@ class CompanyController extends Controller
 
 
     }
+
+    public function CompanyAdd(){
+        return view('backend.setup.companies.company_add');
+    }
 }
