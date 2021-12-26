@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class UserCategory extends Model
 {
     use HasFactory;
+
+
+public function blogs(){
+    return $this->hasMany('User');
+}
 }

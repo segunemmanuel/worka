@@ -15,9 +15,9 @@ class ProfileController extends Controller
     public function ProfileView(){
 
         $id = Auth::user()->id;
-    	$user = User::find($id);
-
-    return view ('backend.setup.profile.view_profile',compact('user'));
+    	$data['user'] = User::find($id);
+        // $data['categories']=UserCategory::select($id)->get();
+    return view ('backend.setup.profile.view_profile',$data);
 
     }
 

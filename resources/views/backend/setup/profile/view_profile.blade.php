@@ -15,8 +15,8 @@
                           <img class="rounded-circle" src="{{ asset($user->image) }}"
                               alt="User Avatar">
 						</a>
-						<h4 class="mt-2 mb-0"><a class="text-white hover-primary" href="#">Roben Parkar</a></h4>
-						<span><i class="w-20 fa fa-map-marker"></i> Miami</span>
+						<h4 class="mt-2 mb-0"><a class="text-white hover-primary" href="#">{{$user->name}}</a></h4>
+						<span><i class="w-20 fa fa-map-marker"></i> {{$user->address}}</span>
 					  </div>
 
 					  <ul class="text-center box-body flexbox flex-justified" data-overlay="4">
@@ -26,7 +26,10 @@
 						</li>
 						<li>
 						  <span class="opacity-60">Date joined </span><br>
-						  <span class="font-size-20">8457</span>
+						  <span class="font-size-20">
+                            {{ Carbon\Carbon::parse($user->created_at)->diffForHumans() }}
+
+                          </span>
 						</li>
 						<li>
 						  <span class="opacity-60">Name</span><br>
@@ -41,9 +44,10 @@
 					  <div class="row">
 						<div class="col-12">
 							<div>
-								<p>Email :<span class="pl-10 text-gray">David@yahoo.com</span> </p>
-								<p>Phone :<span class="pl-10 text-gray">+11 123 456 7890</span></p>
-								<p>Address :<span class="pl-10 text-gray">123, Lorem Ipsum, Florida, USA</span></p>
+								<p>Email :<span class="pl-10 text-gray">{{$user->email}}</span> </p>
+								<p>Phone :<span class="pl-10 text-gray">{{$user->mobile}}</span></p>
+								<p>User Type :<span class="pl-10 text-gray"></span></p>
+
 							</div>
 						</div>
 						<div class="col-12">
