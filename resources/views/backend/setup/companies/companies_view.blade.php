@@ -24,21 +24,27 @@
                    </tr>
                    </thead>
                    <tbody>
+                    @foreach ($companies as $key=> $company )
 
                     <tr>
-                    <td>1</td>
-                   <td>Google</td>
-                   <td>gmail@gmail.com/td>
-                   <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.luptatibus ipsam quasi.</td>
+
+                        <td>{{$key+1}}</td>
+                   <td>{{$company->name}}</td>
+                   <td>{{$company->email}}</td>
+                   <td>{{$company->description}}</td>
                    <td>
-                    <a href="" class="btn btn-info">Edit</a>
-                   <a href="" class="btn btn-danger" id="delete">Delete</a>
+                    <a href="{{route('company.edit', $company->id)}}" class="btn btn-info">Edit</a>
+                   <a href="{{route('company.delete',$company->id)}}" class="btn btn-danger" id="delete">Delete</a>
                    </td>
                    </tr>
+                   @endforeach
+
                    </tbody>
                    <tfoot>
                    </tfoot>
                    </table>
+                   {{ $companies->links() }}
+
                    </div>
                    </div>
                    <!-- /.box-body -->

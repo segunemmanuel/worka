@@ -49,6 +49,12 @@ Route::prefix('setup')->group(function(){
     // Companies
     Route::get('/companies/view', [ CompanyController::class,'CompanyView'])->name('companies.view');
     Route::get('/companies/add', [ CompanyController::class,'CompanyAdd'])->name('company.add');
+    Route::post('/companies/store', [ CompanyController::class,'CompanyStore'])->name('company.store');
+    Route::get('/companies/edit/{id}', [ CompanyController::class,'CompanyEdit'])->name('company.edit');
+    Route::get('/companies/delete/{id}', [ CompanyController::class,'CompanyDelete'])->name('company.delete');
+
+
+
 
 
 

@@ -20,7 +20,7 @@
 <div class="form-group">
 <h5>Name<span class="text-danger">*</span></h5>
 <div class="controls">
-<input type="text" name="name" class="form-control">
+<input type="text" name="name" value={{$company->name}} class="form-control">
 @error('name')
 <span class="text-danger">{{ $message }}</span>
 @enderror
@@ -34,7 +34,7 @@
     <div class="form-group">
     <h5>Logo<span class="text-danger">*</span></h5>
     <div class="controls">
-    <input type="file" name="logo" class="form-control">
+    <input type="file" name="logo" value={{$company->logo}} class="form-control">
         </div>
     </div>
 
@@ -48,7 +48,7 @@
     <div class="form-group">
     <h5>Email<span class="text-danger">*</span></h5>
     <div class="controls">
-    <input type="email" name="email" class="form-control">
+    <input type="email" name="email" value={{$company->email}} class="form-control">
     @error('email')
     <span class="text-danger">{{ $message }}</span>
     @enderror
@@ -62,7 +62,7 @@
         <div class="form-group">
         <h5>Industry<span class="text-danger">*</span></h5>
         <div class="controls">
-        <input type="text" name="industry" class="form-control">
+        <input type="text" name="industry" value={{$company->industry}} class="form-control">
         @error('industry')
         <span class="text-danger">{{ $message }}</span>
         @enderror
@@ -79,7 +79,7 @@
         <div class="form-group">
         <h5>Location<span class="text-danger">*</span></h5>
         <div class="controls">
-        <input type="text" name="location" class="form-control">
+        <input type="text" name="location" value={{$company->location}} class="form-control">
         @error('location')
         <span class="text-danger">{{ $message }}</span>
         @enderror
@@ -93,7 +93,7 @@
             <div class="form-group">
             <h5>Year<span class="text-danger">*</span></h5>
             <div class="controls">
-            <input type="date" name="year" class="form-control">
+            <input type="date" name="year" value={{$company->date_established}} class="form-control">
             @error('year')
             <span class="text-danger">{{ $message }}</span>
             @enderror
@@ -107,7 +107,7 @@
             <div class="form-group">
             <h5>Website URL<span class="text-danger">*</span></h5>
             <div class="controls">
-            <input type="text" name="url" class="form-control">
+            <input type="text" name="url" value={{$company->url}} class="form-control">
             @error('url')
             <span class="text-danger">{{ $message }}</span>
             @enderror
@@ -122,7 +122,7 @@
                     <div class="form-group">
                     <h5>Description<span class="text-danger">*</span></h5>
                     <div class="controls">
-                                        <textarea id="editor1"  name="description" id="" cols="50" rows="10"></textarea>
+                                        <textarea id="editor1" value={{$company->description}} name="description" id="" cols="50" rows="10"></textarea>
                                         <script>
                                             CKEDITOR.replace( 'editor1' );
                                     </script>
