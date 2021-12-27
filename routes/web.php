@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Home\FrontController;
 use App\Http\Controllers\User\CompanyController;
+use App\Http\Controllers\User\JobController;
 use App\Http\Controllers\User\UserCategoryController;
 use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\User\ProfileController;
@@ -53,6 +54,11 @@ Route::prefix('setup')->group(function(){
     Route::get('/companies/edit/{id}', [ CompanyController::class,'CompanyEdit'])->name('company.edit');
     Route::get('/companies/delete/{id}', [ CompanyController::class,'CompanyDelete'])->name('company.delete');
 
+
+// Jobs
+
+Route::get('/jobs/view', [ JobController::class,'JobsView'])->name('jobs.view');
+Route::get('/jobs/add', [ JobController::class,'JobsAdd'])->name('jobs.add');
 
 
 

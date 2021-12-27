@@ -68,6 +68,21 @@
           </li>
 
 
+
+          <li class="treeview">
+            <a href="#">
+              <i data-feather="message-circle"></i>
+              <span>Jobs management</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-right pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="{{route('jobs.view')}}"><i class="ti-anchor"></i>All  Jobs</a></li>
+              <li><a href="{{route('company.add')}}"><i class="ti-more"></i>Create</a></li>
+            </ul>
+          </li>
+
       </ul>
     </section>
 
