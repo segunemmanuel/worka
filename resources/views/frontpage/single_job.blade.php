@@ -103,9 +103,9 @@
                           <span>{{$jobs->company_id}}</span>
                           {{-- <p>{{$company->description}}</p> --}}
                         <ul>
-                            <li>Name: <span>Colorlib </span></li>
-                            <li>Web : <span> colorlib.com</span></li>
-                            <li>Email: <span>carrier.colorlib@gmail.com</span></li>
+                            <li>Name: <span>{{$company->description}}</span></li>
+                            <li>Web : <span>{{$company->url}}</span></li>
+                            <li>Email: <span>{{$company->email}}</span></li>
                         </ul>
                    </div>
                 </div>
