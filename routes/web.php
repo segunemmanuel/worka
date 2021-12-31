@@ -24,6 +24,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::get('/logout', [FrontController::class, 'Logout'])->name('logout');
 
+
+Route::group(['middleware' => 'auth'],function(){
+
 /// User Profile and Change Password
 Route::prefix('home')->group(function(){
 
@@ -32,6 +35,7 @@ Route::prefix('home')->group(function(){
     Route::get('/jobs', [FrontController::class, 'JobView'])->name('job.view');
     Route::get('/blog', [FrontController::class, 'BlogView'])->name('blog.view');
     Route::get('/contact', [FrontController::class, 'ContactView'])->name('contact.view');
+    Route::get('/details/job/{id}/{company_id}', [FrontController::class, 'SingleJobView'])->name('single.job.view');
 
     });
 
@@ -59,6 +63,7 @@ Route::prefix('setup')->group(function(){
 
 Route::get('/jobs/view', [ JobController::class,'JobsView'])->name('jobs.view');
 Route::get('/jobs/add', [ JobController::class,'JobsAdd'])->name('jobs.add');
+Route::post('/jobs/store', [ JobController::class,'JobStore'])->name('jobs.store');
 
 
 
@@ -78,3 +83,72 @@ Route::prefix('profile')->group(function(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+});//End of middleware auth

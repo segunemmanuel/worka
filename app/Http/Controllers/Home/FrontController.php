@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
+use App\Models\Company;
+use App\Models\Jobs;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -37,6 +39,16 @@ class FrontController extends Controller
     public function Logout(){
     	Auth::logout();
     	return Redirect()->route('login');
+
+    }
+
+    public function SingleJobView($id, $company_id){
+
+        $data['jobs']=Jobs::find($id);
+        $data['company']=Company::find($company_id);
+    	// return dd($data);
+    return view('frontpage.single_job',$data);
+
 
     }
 }
