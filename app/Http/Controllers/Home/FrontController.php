@@ -45,6 +45,8 @@ class FrontController extends Controller
     public function SingleJobView($id, $company_id){
 
         $data['jobs']=Jobs::find($id);
+        // $date=Jobs::find($id)->created_at;
+        // $date=$data->created_at;
         $data['company']=Company::find($company_id);
     	// return dd($data);
     return view('frontpage.single_job',$data);

@@ -57,11 +57,8 @@
                                 <h4>Required Knowledge, Skills, and Abilities</h4>
                             </div>
                            <ul>
-                               <li>System Software Development</li>
-                               <li>Mobile Applicationin iOS/Android/Tizen or other platform</li>
-                               <li>Research and code , libraries, APIs and frameworks</li>
-                               <li>Strong knowledge on software development life cycle</li>
-                               <li>Strong problem solving and debugging skills</li>
+                               <li>{{$jobs->requirements}}</li>
+
                            </ul>
                         </div>
                         <div class="post-details2 mb-50">

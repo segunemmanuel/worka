@@ -34,8 +34,7 @@
                     {{ Carbon\Carbon::parse($job->created_at)->diffForHumans() }}
                   </td>
                    <td>{{$job->location}}</td>
-                   <td>{{$job->company_id}}</td>
-
+                  <td> {{$job['job_class']['name']}}</td>
                    <td>
                     <a  class="btn btn-info"><i class="fa fa-edit"></i></a>
                    <a href="{{url("home/details/job/{$job->id}/{$job->company_id}")}}" class="btn btn-primary"><i class="fa fa-check"></i></a>

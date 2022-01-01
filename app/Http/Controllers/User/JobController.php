@@ -13,6 +13,7 @@ class JobController extends Controller
     //
     public function JobsView(){
         $data['jobs']=Jobs::all();
+        $data['companies']=Company::all();
 
         return view('backend.setup.job.job_view',$data);
     }
