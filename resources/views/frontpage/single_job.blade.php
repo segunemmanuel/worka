@@ -49,7 +49,7 @@
                             <div class="small-section-tittle">
                                 <h4>Job Description</h4>
                             </div>
-                            <p>{{$jobs->description}}</p>
+                            <p>{!! $jobs->description !!}</p>
                         </div>
                         <div class="post-details2 mb-50">
                              <!-- Small Section Tittle -->
@@ -57,7 +57,7 @@
                                 <h4>Required Knowledge, Skills, and Abilities</h4>
                             </div>
                            <ul>
-                               <li>{{$jobs->requirements}}</li>
+                               <li>{!! $jobs->requirements !!}</li>
 
                            </ul>
                         </div>
@@ -100,7 +100,7 @@
                           <span>{{$jobs->company_id}}</span>
                           {{-- <p>{{$company->description}}</p> --}}
                         <ul>
-                            <li>Name: <span>{{$company->description}}</span></li>
+                            <li>Name: <span>{!! $company->description !!}</span></li>
                             <li>Web : <span>{{$company->url}}</span></li>
                             <li>Email: <span>{{$company->email}}</span></li>
                         </ul>

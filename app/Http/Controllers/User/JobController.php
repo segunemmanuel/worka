@@ -50,10 +50,37 @@ class JobController extends Controller
     return redirect()->route('jobs.view')->with($notification);
 
 
+    }
 
 
+    public function JobEdit(Request $request,$id){
+$data['job']=Jobs::find($id);
+
+return view('backend.setup.job.job_edit',$data);
+
+    }
 
 
+    public function JobUpdate(Request $request,$id){
+        $data=Jobs::find($id);
+        $data->title=$request->title;
+        $data->company_id=$request->company_id;
+        $data->description=$request->description;
+        $data->location=$request->location;
+        $data->requirements=$request->requirements;
+        $data->responbilities=$request->responbilities;
+        $data->salary=$request->salary;
+        $data->gender=$request->gender;
+        $data->type=$request->type;
+        $data->degree=$request->degree;
+        $data->save();
+
+        $notification = array(
+            'message' => 'Job added Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->route('jobs.view')->with($notification);
 
 
     }

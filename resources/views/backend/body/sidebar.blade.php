@@ -79,7 +79,7 @@
             </a>
             <ul class="treeview-menu">
               <li><a href="{{route('jobs.view')}}"><i class="ti-anchor"></i>All  Jobs</a></li>
-              <li><a href="{{route('company.add')}}"><i class="ti-more"></i>Create</a></li>
+              <li><a href="{{route('jobs.add')}}"><i class="ti-more"></i>Create</a></li>
             </ul>
           </li>
 

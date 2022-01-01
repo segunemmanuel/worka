@@ -10,7 +10,7 @@
 <div class="box-body">
 <div class="row">
 <div class="col">
-<form method="POST" action="{{route('jobs.store')}}" enctype="multipart/form-data">
+<form method="POST" action="{{route('jobs.update',$job->id)}}" enctype="multipart/form-data">
     @csrf
 <input type="hidden" name="name">
 <div class="row">
@@ -18,7 +18,7 @@
 <div class="form-group">
 <h5>Title <span class="text-danger">*</span></h5>
 <div class="controls">
-<input type="text" name="title" class="form-control">
+<input type="text" name="title" class="form-control" value="{{$job->title}}">
 @error('title')
 <span class="text-danger">{{ $message }}</span>
 @enderror
@@ -32,7 +32,7 @@
     <h5>Location<span class="text-danger">*</span></h5>
     <div class="controls">
         <select name="location" class="form-control">
-            <option disabled selected>--Select State--</option>
+            <option disabled selected >{{$job->location}}</option>
             <option value="Abia">Abia</option>
             <option value="Adamawa">Adamawa</option>
             <option value="Akwa Ibom">Akwa Ibom</option>
@@ -85,7 +85,7 @@
         <div class="form-group">
         <h5>Salary <span class="text-danger">*</span></h5>
         <div class="controls">
-        <input type="number" name="salary" class="form-control">
+        <input type="number"  value="{{$job->salary}}" name="salary" class="form-control">
         @error('salary')
         <span class="text-danger">{{ $message }}</span>
         @enderror
@@ -100,8 +100,10 @@
             <div class="controls">
      <select class="form-control"  name="gender">
         <option disabled selected>--Select Sex-</option>
-        <option value="female">Female</option>
-        <option value="male">Male</option>
+            <option value="female" {{$job->gender == 'female'  ? 'selected' : ''}}>Female</option>
+            <option value="male" {{$job->gender == 'male'  ? 'selected' : ''}}>Male</option>
+
+    </select>
      </select>
             @error('gender')
             <span class="text-danger">{{ $message }}</span>
@@ -119,8 +121,8 @@
                 <div class="controls">
                     <select class="form-control"  name="type">
         <option disabled selected>--Select type-</option>
-                        <option value="parttime">Part-time</option>
-                        <option value="fulltime">Full-time</option>
+        <option value="parttime" {{$job->type == 'parttime'  ? 'selected' : ''}}>Part time</option>
+        <option value="fulltime" {{$job->type == 'fulltime'  ? 'selected' : ''}}>Full time</option>
                      </select>
                 @error('type')
                 <span class="text-danger">{{ $message }}</span>
@@ -136,12 +138,11 @@
                     <div class="controls">
                         <select class="form-control"  name="degree">
         <option disabled selected>--Select degree-</option>
-        <option value="msc">Msc</option>
-                            <option value="bsc">Bsc</option>
-                            <option value="ssce">SSCE</option>
-                            <option value="ond">OND</option>
-                            <option value="hnd">HND</option>
-                            <option value="others">Others</option>
+        <option value="msc" {{$job->degree== 'msc'  ? 'selected' : ''}}>Msc</option>
+        <option value="ssce" {{$job->degree == 'ssce'  ? 'selected' : ''}}>SSCE</option>
+        <option value="ond" {{$job->degree == 'ond'  ? 'selected' : ''}}>OND</option>
+        <option value="hnd" {{$job->degree == 'hnd'  ? 'selected' : ''}}>HND</option>
+        <option value="others" {{$job->type == 'others'  ? 'selected' : ''}}>Others</option>
                          </select>
                     @error('name')
                     <span class="text-danger">{{ $message }}</span>
@@ -159,7 +160,9 @@
                             <div class="form-group">
                             <h5>Description<span class="text-danger">*</span></h5>
                             <div class="controls">
-                                                <textarea id="editor1"  name="description" id="" cols="50" rows="10"></textarea>
+                                                <textarea id="editor1"   name="description" id="" cols="50" rows="10">
+                                                    {{$job->description}}
+                                                </textarea>
                                                 <script>
                                                     CKEDITOR.replace( 'editor1' );
 
@@ -182,7 +185,10 @@
                     <div class="form-group">
                     <h5>Requirements<span class="text-danger">*</span></h5>
                     <div class="controls">
-                                        <textarea id="editor2"  name="requirements" id="" cols="50" rows="10"></textarea>
+                                        <textarea id="editor2"  name="requirements" id="" cols="50" rows="10">
+                                            {{$job->requirements}}
+
+                                        </textarea>
                                         <script>
                                             CKEDITOR.replace( 'editor2' );
                                     </script>
@@ -201,7 +207,10 @@
                     <div class="form-group">
                     <h5>Responbilities<span class="text-danger">*</span></h5>
                     <div class="controls">
-                                        <textarea id="editor3"  name="responbilities" id="" cols="50" rows="10"></textarea>
+                                        <textarea id="editor3"  name="responbilities" id="" cols="50" rows="10">
+                                            {{$job->responbilities}}
+
+                                        </textarea>
                                         <script>
                                             CKEDITOR.replace( 'editor3' );
 
@@ -215,26 +224,7 @@
                     </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                    <h5>Company<span class="text-danger">*</span></h5>
-                    <div class="controls">
-                        <select class="form-control"  name="company_id">
-                            <option disabled selected>--Select a company-</option>
-                            @foreach ( $companies as $company )
-                            <option value="{{$company->id}}">{{$company->name}}</option>
-                            @endforeach
 
-                                             </select>
-                    @error('company_id')
-                    <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                    </div>
-                    </div>
-
-                    </div>
-            </div>
 
     <div class="text-xs-right">
         <input type="submit" class="mb-5 btn btn-rounded btn-info" value="Submit">
