@@ -25,10 +25,10 @@
                    </tr>
                    </thead>
                    <tbody>
-@foreach ($jobs as $job)
+@foreach ($jobs as $key=>$job)
 
                    <tr>
-                   <td>1</td>
+                    <td>{{ $key+1 }}</td>
                    <td>{{ $job->title }}</td>
                    <td>
                     {{ Carbon\Carbon::parse($job->created_at)->diffForHumans() }}
@@ -37,9 +37,8 @@
                   <td> {{$job->company_id}}</td>
                    <td>
                     <a href="{{route("job.edit",$job->id)}}"  class="btn btn-info"><i class="fa fa-edit"></i></a>
-                   <a href="{{url("home/details/job/{$job->id}/{$job->company_id}")}}" class="btn btn-primary"><i class="fa fa-check"></i></a>
-
-                   <a href=""  class="btn btn-danger"><i class="fa fa-eye"></i></a>
+                   <a href="{{url("home/details/job/{$job->id}/{$job->company_id}")}}" class="btn btn-primary"><i class="fa fa-eye"></i></a>
+                   <a href="{{route('job.delete',$job->id)}}" id="delete" class="btn btn-danger"><i class="fa fa-check"></i></a>
 
                    </td>
                    </tr>

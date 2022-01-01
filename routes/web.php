@@ -66,6 +66,8 @@ Route::get('/jobs/add', [ JobController::class,'JobsAdd'])->name('jobs.add');
 Route::post('/jobs/store', [ JobController::class,'JobStore'])->name('jobs.store');
 Route::get('/jobs/edit/{id}', [ JobController::class,'JobEdit'])->name('job.edit');
 Route::post('/jobs/update/{id}', [ JobController::class,'JobUpdate'])->name('jobs.update');
+Route::get('/jobs/delete/{id}', [ JobController::class,'JobDelete'])->name('job.delete');
+
 
 
 

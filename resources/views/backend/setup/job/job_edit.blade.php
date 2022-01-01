@@ -10,7 +10,7 @@
 <div class="box-body">
 <div class="row">
 <div class="col">
-<form method="POST" action="{{route('jobs.update',$job->id)}}" enctype="multipart/form-data">
+<form method="POST" action="{{route('jobs.store')}}" enctype="multipart/form-data">
     @csrf
 <input type="hidden" name="name">
 <div class="row">
@@ -224,7 +224,24 @@
                     </div>
             </div>
 
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                    <h5>Company<span class="text-danger">*</span></h5>
+                    <div class="controls">
+                        <select class="form-control"  name="company_id">
+                            <option disabled selected>--Select a company-</option>
+                            <option value="{{$job->company_id}}">{{$job->company_id}}</option>
 
+                                             </select>
+                    @error('company_id')
+                    <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                    </div>
+                    </div>
+
+                    </div>
+            </div>
 
     <div class="text-xs-right">
         <input type="submit" class="mb-5 btn btn-rounded btn-info" value="Submit">

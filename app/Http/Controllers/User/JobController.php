@@ -84,6 +84,16 @@ return view('backend.setup.job.job_edit',$data);
 
 
     }
+
+
+    public function JobDelete($id){
+       Jobs::find($id)->delete();
+        $notification = array(
+            'message' => 'Job Deleted Successfully!',
+            'alert-type' => 'error'
+        );
+        return Redirect()->back()->with($notification);
+    }
 }
 
 
