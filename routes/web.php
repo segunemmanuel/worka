@@ -74,12 +74,9 @@ Route::get('/jobs/delete/{id}', [ JobController::class,'JobDelete'])->name('job.
 Route::get('/career/levels/view', [ CareerLevelController::class,'CareersLevelView'])->name('career.level.view');
 Route::get('/career/levels/add', [ CareerLevelController::class,'CareersLevelAdd'])->name('career.level.add');
 Route::post('/career/levels/store', [ CareerLevelController::class,'CareersLevelStore'])->name('career.level.store');
-
-
-
-
-
-
+Route::get('/career/edit/{id}', [ CareerLevelController::class,'CareerEdit'])->name('career.level.edit');
+Route::post('/career/update/{id}', [ CareerLevelController::class,'CareerUpdate'])->name('career.level.update');
+Route::get('/career/delete/{id}', [ CareerLevelController::class,'CareerLevelDelete'])->name('career.level.delete');
 
 
 

@@ -95,7 +95,7 @@
             </a>
             <ul class="treeview-menu">
               <li><a href="{{route('career.level.view')}}"><i class="ti-anchor"></i>All  career levels</a></li>
-              <li><a href="{{route('jobs.add')}}"><i class="ti-more"></i>Create</a></li>
+              <li><a href="{{route('career.level.add')}}"><i class="ti-more"></i>Create</a></li>
             </ul>
           </li>
 

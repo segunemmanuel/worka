@@ -28,11 +28,11 @@
                     <tr>
                     <td>{{$key+1}}</td>
                    <td>{{$career->name}}</td>
-                   <td>{{$career->status}}</td>
+                   <td>{{$career->status=='1'? 'Active' : 'Inactive'}}</td>
                    <td>
-                    <a   class="btn btn-info"><i class="fa fa-edit"></i></a>
+                    <a  href="{{route('career.level.edit',$career->id)}}" class="btn btn-info"><i class="fa fa-edit"></i></a>
                    <a class="btn btn-primary"><i class="fa fa-eye"></i></a>
-                   <a  id="delete" class="btn btn-danger"><i class="fa fa-check"></i></a>
+                   <a href="{{route('career.level.delete',$career->id)}}" id="delete" class="btn btn-danger"><i class="fa fa-check"></i></a>
 
                    </td>
                    </tr>
