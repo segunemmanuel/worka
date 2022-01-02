@@ -88,13 +88,13 @@
           <li class="treeview">
             <a href="#">
               <i data-feather="message-circle"></i>
-              <span>Jobs management</span>
+              <span>Jobs attributes</span>
               <span class="pull-right-container">
                 <i class="fa fa-angle-right pull-right"></i>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="{{route('jobs.view')}}"><i class="ti-anchor"></i>All  Jobs</a></li>
+              <li><a href="{{route('career.level.view')}}"><i class="ti-anchor"></i>All  career levels</a></li>
               <li><a href="{{route('jobs.add')}}"><i class="ti-more"></i>Create</a></li>
             </ul>
           </li>

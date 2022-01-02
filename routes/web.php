@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Home\FrontController;
+use App\Http\Controllers\Job\CareerLevelController;
 use App\Http\Controllers\User\CompanyController;
 use App\Http\Controllers\User\JobController;
 use App\Http\Controllers\User\UserCategoryController;
@@ -67,6 +68,12 @@ Route::post('/jobs/store', [ JobController::class,'JobStore'])->name('jobs.store
 Route::get('/jobs/edit/{id}', [ JobController::class,'JobEdit'])->name('job.edit');
 Route::post('/jobs/update/{id}', [ JobController::class,'JobUpdate'])->name('jobs.update');
 Route::get('/jobs/delete/{id}', [ JobController::class,'JobDelete'])->name('job.delete');
+
+
+// Career levels
+Route::get('/career/levels/view', [ CareerLevelController::class,'CareersLevelView'])->name('career.level.view');
+Route::get('/career/levels/add', [ CareerLevelController::class,'CareersLevelAdd'])->name('career.level.add');
+Route::post('/career/levels/store', [ CareerLevelController::class,'CareersLevelStore'])->name('career.level.store');
 
 
 
