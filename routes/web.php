@@ -82,6 +82,8 @@ Route::get('/career/delete/{id}', [ CareerLevelController::class,'CareerLevelDel
 
 // Functional areas
 Route::get('/function/view', [FunctionController::class,'FunctionLevel'])->name('functional.view');
+Route::get('/function/add', [FunctionController::class,'FunctionAdd'])->name('functions.add');
+Route::post('/function/store', [FunctionController::class,'FunctionStore'])->name('function.store');
 
 
 });
