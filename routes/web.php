@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Home\FrontController;
 use App\Http\Controllers\Job\CareerLevelController;
+use App\Http\Controllers\Job\FunctionController;
 use App\Http\Controllers\User\CompanyController;
 use App\Http\Controllers\User\JobController;
 use App\Http\Controllers\User\UserCategoryController;
@@ -79,6 +80,8 @@ Route::post('/career/update/{id}', [ CareerLevelController::class,'CareerUpdate'
 Route::get('/career/delete/{id}', [ CareerLevelController::class,'CareerLevelDelete'])->name('career.level.delete');
 
 
+// Functional areas
+Route::get('/function/view', [FunctionController::class,'FunctionLevel'])->name('functional.view');
 
 
 });
@@ -90,6 +93,8 @@ Route::prefix('profile')->group(function(){
     Route::get('/edit_profile', [ ProfileController::class,'ProfileEdit'])->name('edit.profile');
     Route::post('/update_profile/{id}', [ ProfileController::class,'ProfileUpdate'])->name('profile.update');
 });
+
+
 
 
 
