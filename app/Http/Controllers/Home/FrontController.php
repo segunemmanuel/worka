@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
 use App\Models\Company;
+use App\Models\JobCategory;
 use App\Models\Jobs;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -14,7 +15,10 @@ class FrontController extends Controller
 
 
     public function HomeView(){
-        return view('frontpage.home');
+        $data['categories']=JobCategory::all();
+
+        $data['featured_jobs']=Jobs::where('is_featured',1)->get();
+        return view('frontpage.home',$data);
     }
 
 
@@ -24,7 +28,9 @@ class FrontController extends Controller
 
 
     public function JobView(){
-        return view('frontpage.find_jobs');
+
+        $data['jobs']=Jobs::all();
+        return view('frontpage.find_jobs',$data);
     }
 
     public function BlogView(){
