@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Home\ApplicationController;
 use App\Http\Controllers\Home\FrontController;
+use App\Http\Controllers\Home\JobApplyController;
 use App\Http\Controllers\Job\CareerLevelController;
 use App\Http\Controllers\Job\FunctionController;
 use App\Http\Controllers\User\CompanyController;
@@ -97,9 +99,16 @@ Route::prefix('profile')->group(function(){
 });
 
 
+Route::prefix('apply')->group(function(){
+
+    Route::get('/job_apply/{id}', [ JobApplyController::class,'Apply'])->name('apply');
 
 
 
+});
+
+
+Route::get('/application/view', [ ApplicationController::class,'ApplicationView'])->name('applications.view');
 
 
 

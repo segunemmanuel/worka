@@ -16,9 +16,8 @@ class FrontController extends Controller
 
     public function HomeView(){
         $data['categories']=JobCategory::all();
-
         $data['featured_jobs']=Jobs::where('is_featured',1)->get();
-        return view('frontpage.home',$data);
+        return view('frontpage.home', $data);
     }
 
 
